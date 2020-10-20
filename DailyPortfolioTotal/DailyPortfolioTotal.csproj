@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>    
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.106.37" />    
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>DLLs\HtmlAgilityPack.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack.CssSelectors">
+      <HintPath>DLLs\HtmlAgilityPack.CssSelectors.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DLLs\" />
+  </ItemGroup>
+</Project>
